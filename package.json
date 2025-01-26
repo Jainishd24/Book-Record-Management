@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/rohandt0002/J0123P3-Build#readme",
   "devDependencies": {
-    "nodemon": "^2.0.21"
+    "nodemon": "^3.1.9"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "dotenv": "^16.4.7",
+    "express": "^4.18.2",
+    "mongodb": "^6.12.0",
+    "mongoose": "^8.9.5"
   }
 }
