@@ -1,5 +1,5 @@
 const { UserModel, BookModel } = require("../models/index");
-
+const issuedBook = require("../dtos/book-dto.js");
 // const getAllBooks = () => {};
 exports.getAllBooks = async (req, res) => {
   const books = await BookModel.find();
