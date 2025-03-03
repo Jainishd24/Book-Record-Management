@@ -1,5 +1,6 @@
 const { UserModel, BookModel } = require("../models/index");
-const issuedBook = require("../dtos/book-dto.js");
+// const issuedBook = require("../dtos/book-dto.js");
+const IssuedBook = require("../dtos/book-dto.js");
 // const getAllBooks = () => {};
 exports.getAllBooks = async (req, res) => {
   const books = await BookModel.find();
@@ -62,6 +63,7 @@ exports.getAllIssuedBooks = async (req, res) => {
         }).populate("issuedBook");
 
         // Data Transfer Object (DTO)
+        const issuedBooks = users.map((each)=> new IssuedBook(each));
  
      if (issuedBooks.length === 0) {
        return res.status(404).json({
@@ -74,4 +76,8 @@ exports.getAllIssuedBooks = async (req, res) => {
        message: "Users With The Issued Books...",
        data: issuedBooks,
      });
+}
+
+exports.addNewBook = async (req,res) => {
+
 }
