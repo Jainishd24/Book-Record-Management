@@ -17,8 +17,9 @@ class IssuedBook {
     this.genre = user.issuedBook.genre;
     this.price = user.issuedBook.price;
     this.publisher = user.issuedBook.publisher;
-    this.issuedBy = user.issuedBook.issuedBy;
-    this.issuedDate= user.issuedBook.issuedDate;
+    this.issuedBy = user.issuedBy;
+    this.issuedDate = user.issuedDate;
+    this.issuedreturnDate = user.returnDate;
   }
 }
 
